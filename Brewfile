@@ -8,17 +8,17 @@ tap "homebrew/services"
 cask_args appdir: '/Applications'
 
 #Binaries/Libraries
-brew "zsh"
-brew "zsh-comletions"
-brew "wget"
-brew "font-hack-nerd-font"
-brew "tmux"
-brew "git'
-brew 
+brew 'zsh'
+brew 'zsh-completions'
+brew 'wget'
+brew 'tmux'
+brew 'git'
+brew 'mackup'
 
 # Applications
-cask "istat-menus"
-cask "iterm2"
-cask "google-chrome"
-cask "visual-sudio-code"
+cask 'font-hack-nerd-font'
+cask 'istat-menus'
+cask 'iterm2'
+cask 'google-chrome'
+cask 'visual-studio-code'
 
