@@ -4,57 +4,43 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/dongwoo-yang/.oh-my-zsh"
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="agnoster-light"
-#ZSH_THEME="agnoster-light"
-#ZSH_THEME="powerlevel9k/powerlevel9k"
-#POWERLEVEL9K_COLOR_SCHEME='light'
-#POWERLEVEL9K_VCS_BRANCH_ICON=$'\uF126 '
-#POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\uE0B1'
-#POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$'\uE0B3'
 
-#POWERLEVEL9K_MODE='awesome-fontconfig'
+
+#powerlevel9k 테마
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_COLOR_SCHEME='white'
 POWERLEVEL9K_TIME_FOREGROUND='red'
 POWERLEVEL9K_TIME_BACKGROUND='blue'
 
-
+#powerlevel9k 폰트 관련
 POWERLEVEL9K_MODE='awesome-patched'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status nvm node_version)
 
+#powerlevel9k 아이콘 관련
 POWERLEVEL9K_OS_ICON_BACKGROUND="black"
 POWERLEVEL9K_OS_ICON_FOREGROUND="196"
 POWERLEVEL9K_DIR_HOME_FOREGROUND="195"
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="195"
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="195"
 
-# Advanced `vcs` color customization
 
-
-
-
-
-
-
-
-
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
@@ -82,16 +68,21 @@ POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="195"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
 plugins=(
   git
   zsh-syntax-highlighting
@@ -101,18 +92,12 @@ plugins=(
   tmuxinator
 )
 
+source $ZSH/oh-my-zsh.sh
 
+#prompt관련
 autoload -U promptinit; promptinit
 prompt pure
 
-alias vi="nvim"
-alias vimdiff="nvim -d"
-export EDITOR=/usr/local/bin/nvim
-alias mux="tmuxinator"
-
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -126,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
-# fi
+# fia
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -142,5 +127,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
