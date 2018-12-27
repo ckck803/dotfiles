@@ -94,10 +94,19 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-#prompt관련
+
 autoload -U promptinit; promptinit
 prompt pure
 
+
+alias vi="nvim"
+alias vimdiff="nvim -d"
+export EDITOR=/usr/local/bin/nvim
+alias mux="tmuxinator"
+
+
+
+# export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
 
 # User configuration
 
