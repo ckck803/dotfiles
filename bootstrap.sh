@@ -15,7 +15,6 @@ brew cleanup
 chsh -s $(which zsh)
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 [ ! -f $HOME/.zshrc ] && ln -nfs $HOME/dotfiles/.zshrc $HOME/.zshrc
-source $HOME/.zshrc
 
 #powerlevel9k 설치
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
@@ -34,6 +33,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 curl -sLf https://spacevim.org/install.sh | bash
 
 [ ! -f $HOME/.mackup.cfg ] && ln -nfs $HOME/dotfiles/.mackup.cfg $HOME/.mackup.cfg
+
+source $HOME/.zshrc
 
 #/usr/local/bin/composer global require laravel/installer laravel/envoy laravel/valet tightenco/jigsaw
 #$HOME/.composer/vendor/bin/valet install
