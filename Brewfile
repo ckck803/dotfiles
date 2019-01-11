@@ -21,7 +21,6 @@ brew 'fzf'
 
 # Applications
 cask 'font-hack-nerd-font'
-cask 'istat-menus'
 cask 'iterm2'
 cask 'google-chrome'
 cask 'visual-studio-code'
