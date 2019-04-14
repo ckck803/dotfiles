@@ -9,10 +9,8 @@ brew bundle --file=$HOME/dotfiles/Brewfile
 brew cleanup
 
 #pure prompt
-if !$(which node) then
-    brew install nodejs
-    npm install --global pure-prompt
-if
+brew install nodejs
+npm install --global pure-prompt
 
 [ ! -f $HOME/.gitconfig ] && ln -nfs $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 [ ! -f $HOME/.gitignore_global ] && ln -nfs $HOME/dotfiles/.gitignore_global $HOME/.gitignore_global
