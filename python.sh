@@ -1,5 +1,6 @@
 #! /bin/zsh
 
+cd $HOME
 pip3 install virtualenv
 virtualenv env1
 source ./env1/bin/activate
