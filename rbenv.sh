@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 # rbenv 설치
 brew install rbenv
@@ -10,3 +10,4 @@ rbenv rehash
 
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+source ${HOME}/.zshrc
