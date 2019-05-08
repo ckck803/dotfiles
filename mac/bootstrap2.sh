@@ -9,6 +9,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 #spacevim
 curl -sLf https://spacevim.org/install.sh | bash
+open SourceCodePro+Powerline+Awesome+Regular.ttf
 
 [ ! -f $HOME/.mackup.cfg ] && ln -nfs $HOME/dotfiles/.mackup.cfg $HOME/.mackup.cfg
 

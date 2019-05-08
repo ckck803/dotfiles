@@ -3,9 +3,12 @@ if test ! $(which brew); then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+position=$(pwd)
+
 brew update
 brew tap homebrew/bundle
-brew bundle --file=$HOME/dotfiles/Brewfile
+#brew bundle --file=$HOME/dotfiles/Brewfile
+brew bundle --file=$position/Brewfile
 brew cleanup
 
 #pure prompt
@@ -17,4 +20,4 @@ npm install --global pure-prompt
 
 chsh -s $(which zsh)
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-[ ! -f $HOME/.zshrc ] && ln -nfs $HOME/dotfiles/.zshrc $HOME/.zshrc
+[ ! -f $HOME/.zshrc ] && cd $position && ln -nfs $HOME/dotfiles/.zshrc $HOME/.zshrc
