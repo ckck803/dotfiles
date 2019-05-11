@@ -13,46 +13,22 @@ export ZSH="$HOME/.oh-my-zsh"
 #powerlevel9k 테마
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_COLOR_SCHEME='white'
+POWERLEVEL9K_TIME_FOREGROUND='red'
+POWERLEVEL9K_TIME_BACKGROUND='blue'
+
+#powerlevel9k 폰트 관련
+POWERLEVEL9K_MODE='awesome-patched'
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs )
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status nvm node_version)
+
 
 #powerlevel9k 아이콘 관련
-
-# os icon
 POWERLEVEL9K_OS_ICON_BACKGROUND="black"
 POWERLEVEL9K_OS_ICON_FOREGROUND="196"
-
-# dir icon
 POWERLEVEL9K_DIR_HOME_FOREGROUND="195"
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="195"
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="195"
-
-# 배터리와 관련된 부분
-POWERLEVEL9K_BATTERY_CHARGING='yellow'
-POWERLEVEL9K_BATTERY_CHARGED='green'
-POWERLEVEL9K_BATTERY_DISCONNECTED='$DEFAULT_COLOR'
-POWERLEVEL9K_BATTERY_LOW_THRESHOLD='10'
-POWERLEVEL9K_BATTERY_LOW_COLOR='red'
-POWERLEVEL9K_BATTERY_ICON='\uf1e6'
-# POWERLEVEL9K_BATTERY_CHARGING_ICON='\uf1e6'
-# POWERLEVEL9K_BATTERY_CHARGED_ICON='\uf1e6'
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='\uf0da'
-
-# 오른쪽 시간과 관련된 부분
-POWERLEVEL9K_TIME_BACKGROUND='green'
-POWERLEVEL9K_TIME_FOREGROUND='while'
-# POWERLEVEL9K_CUSTOM_TIME_FORMAT="%D{\uf017 %H:%M:%S}"
-POWERLEVEL9K_TIME_FORMAT="%D{\uf017 %H:%M \uf073 %d.%m.%y}"
-
-#powerlevel9k 폰트 관련
-#POWERLEVEL9K_MODE='awesome-patched'
-#POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_MODE='nerdfont-complete'
-#source ~/powerlevel9k/powerlevel9k.zsh-theme
-
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs newline status)
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status nvm time battery dir_writable)
-
 
 
 # Set list of themes to pick from when loading at random
@@ -120,16 +96,14 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 
-# autoload -U promptinit; promptinit
-# prompt pure
+autoload -U promptinit; promptinit
+prompt pure
 
 
 alias vi="nvim"
 alias vimdiff="nvim -d"
 export EDITOR=/usr/local/bin/nvim
 alias mux="tmuxinator"
-alias ls="colorls"
-
 
 # export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
 
@@ -161,7 +135,5 @@ alias ls="colorls"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

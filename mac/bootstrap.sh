@@ -20,4 +20,14 @@ npm install --global pure-prompt
 
 chsh -s $(which zsh)
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-[ ! -f $HOME/.zshrc ] && cd $position && ln -nfs $HOME/dotfiles/.zshrc $HOME/.zshrc
+
+# .zshrc가 존재하지 않을 경웈
+if [ ! -f $HOME/.zshrc ]
+then
+    cp $position/.zshrc $HOME/
+else
+# .zshrc가 존재할 경우
+    cd $position
+    ln -nfs $position/.zshrc $HOME/.zshrc
+fi
+#[ ! -f $HOME/.zshrc ] && cd $position && ln -nfs $HOME/dotfiles/.zshrc $HOME/.zshrc

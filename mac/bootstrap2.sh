@@ -1,3 +1,6 @@
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+
 #powerlevel9k 설치
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 

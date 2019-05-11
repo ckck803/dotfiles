@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # rbenv 설치
 brew install rbenv

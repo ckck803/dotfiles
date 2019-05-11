@@ -20,6 +20,10 @@ brew 'fzf'
 
 
 # Applications
+cask 'homebrew/cask-drivers/logitech-options'
+brew 'untap caskroom/fonts'
+brew 'tap homebrew/cask-fonts'
+brew 'cask install font-hack-nerd-font'
 cask 'font-hack-nerd-font'
 cask 'iterm2'
 cask 'google-chrome'
@@ -27,4 +31,4 @@ cask 'visual-studio-code'
 cask 'android-studio'
 cask 'slack'
 cask 'karabiner-elements'
-cask 'parallels13'
+cask 'homebrew/cask-versions/parallels13'
