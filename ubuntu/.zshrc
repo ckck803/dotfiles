@@ -8,8 +8,37 @@
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
 
+#powerlevel9k 테마
+ZSH_THEME="powerlevel9k/powerlevel9k"
+# POWERLEVEL9K_COLOR_SCHEME='white'
+# POWERLEVEL9K_TIME_FOREGROUND='red'
+# POWERLEVEL9K_TIME_BACKGROUND='blue'
+
+#powerlevel9k 폰트 관련
+# POWERLEVEL9K_MODE='awesome-patched'
+# POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_MODE='nerdfont-complete'
+source ~/powerlevel9k/powerlevel9k.zsh-theme
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs newline status)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+# POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
+
+
+
+
+# POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs newline status)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status nvm node_version)
+
+# powerlevel9k 아이콘 관련
+# POWERLEVEL9K_OS_ICON_BACKGROUND="black"
+# POWERLEVEL9K_OS_ICON_FOREGROUND="196"
+# POWERLEVEL9K_DIR_HOME_FOREGROUND="195"
+# POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="195"
+# POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="195"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/

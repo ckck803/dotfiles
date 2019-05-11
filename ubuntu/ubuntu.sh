@@ -15,4 +15,4 @@ cd ..
 
 chsh -s $(which zsh)
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-#[ ! -f $HOME/.zshrc ] && cd $home && ln -nfs $HOME/dotfiles/.zshrc $HOME/.zshrc
+#[ ! -f $HOME/.zshrc ] && cd $home && ln -nfs $home/.zshrc $HOME/.zshrc
