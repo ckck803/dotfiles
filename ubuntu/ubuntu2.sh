@@ -4,8 +4,13 @@ git clone https://github.com/powerline/fonts.git
 cd fonts
 ./install.sh
 
+https://github.com/ryanoasis/nerd-fonts.git
+cd nerd-fonts
+./install.sh
+
 mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf"
+cd ~/.local/share/fonts 
+curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf"
 
 
 #powerlevel9k 설치
