@@ -15,9 +15,7 @@ cd ..
 
 chsh -s $(which zsh)
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-<<<<<<< HEAD
 #[ ! -f $HOME/.zshrc ] && cd $home && ln -nfs $home/.zshrc $HOME/.zshrc
-=======
 #[ ! -f $HOME/.zshrc ] && cd $home && ln -nfs $HOME/dotfiles/.zshrc $HOME/.zshrc
 
 if [ ! -f $HOME/.zshrc ]
@@ -29,4 +27,3 @@ else
     cd $position
     ln -nfs $position/.zshrc $HOME/.zshrc
 fi
->>>>>>> 195ad27f500acf6add0f13d7e7828c5452ba3a72
