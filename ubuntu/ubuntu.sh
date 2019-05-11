@@ -17,7 +17,7 @@ chsh -s $(which zsh)
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 #[ ! -f $HOME/.zshrc ] && cd $home && ln -nfs $HOME/dotfiles/.zshrc $HOME/.zshrc
 
-if [ ! -f $HOME/.zshrcfff ]
+if [ ! -f $HOME/.zshrc ]
 then
     # .zshrc가 없을 경우
     cp $position/.zshrc $HOME/

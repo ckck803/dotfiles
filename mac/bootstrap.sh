@@ -22,7 +22,7 @@ chsh -s $(which zsh)
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # .zshrc가 존재하지 않을 경웈
-if [ ! -f $HOME/.zshrcfff ]
+if [ ! -f $HOME/.zshrc ]
 then
     cp $position/.zshrc $HOME/
 else
