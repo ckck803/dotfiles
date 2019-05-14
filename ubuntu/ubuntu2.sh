@@ -1,10 +1,21 @@
 #!/bin/bash
+
+if [ ! -f $HOME/.zshrc ]
+then
+    # .zshrc가 없을 경우
+    cp $HOME/dotfiles/ubuntu/.zshrc.zshrc $HOME/
+else
+    # .zshrc가 존재할 경우
+    cd $position
+    ln -nfs $HOME/dotfiles/ubuntu/.zshrc $HOME/.zshrc
+fi
+
 #powerline 폰트 설치
 git clone https://github.com/powerline/fonts.git
 cd fonts
 ./install.sh
 
-https://github.com/ryanoasis/nerd-fonts.git
+git clone https://github.com/ryanoasis/nerd-fonts.git
 cd nerd-fonts
 ./install.sh
 
