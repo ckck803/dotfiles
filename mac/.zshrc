@@ -46,15 +46,15 @@ POWERLEVEL9K_BATTERY_ICON='\uf1e6'
 # 오른쪽 시간과 관련된 부분
 POWERLEVEL9K_TIME_BACKGROUND='white'
 # POWERLEVEL9K_CUSTOM_TIME_FORMAT="%D{\uf017 %H:%M:%S}"
-POWERLEVEL9K_TIME_FORMAT="%D{\uf017 %H:%M \uf073 %d.%m.%y}"
+POWERLEVEL9K_TIME_FORMAT="%D{\uf017 %H:%M \uf073 %y.%m.%d}"
 
 
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+#POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status nvm time battery dir_writable)
 
-
+# 밑에 입력하는 부분
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%F{cyan}\uF460%F{073}\uF460%F{109}\uF460%f "
@@ -128,8 +128,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 
-# autoload -U promptinit; promptinit
-# prompt pure
+autoload -U promptinit; promptinit
+prompt pure
 
 
 alias vi="nvim"
@@ -173,3 +173,5 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export CLICOLOR=1

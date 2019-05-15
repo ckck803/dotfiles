@@ -1,3 +1,12 @@
+# .zshrc가 존재하지 않을 경웈
+if [ ! -f $HOME/.zshrc ]
+then
+    cp $HOME/mac/.zshrc $HOME/
+else
+# .zshrc가 존재할 경우
+    ln -nfs $HOME/mac/.zshrc $HOME/.zshrc
+fi
+
 # To install useful key bindings and fuzzy completion:
 $(brew --prefix)/opt/fzf/install
 
