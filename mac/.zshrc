@@ -137,7 +137,8 @@ alias vimdiff="nvim -d"
 export EDITOR=/usr/local/bin/nvim
 alias mux="tmuxinator"
 alias ls="colorls"
-
+alias vscode="$HOME/vscode.sh"
+alias touchmd="$HOME/touchmd.sh"
 
 # export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
 
