@@ -4,7 +4,7 @@ then
     cp $HOME/dotfiles/mac/.zshrc $HOME/
 else
 # .zshrc가 존재할 경우
-    ln -nfs $HOME//dotfiles/mac/.zshrc $HOME/.zshrc
+    ln -nfs $HOME/dotfiles/mac/.zshrc $HOME/.zshrc
 fi
 
 # To install useful key bindings and fuzzy completion:

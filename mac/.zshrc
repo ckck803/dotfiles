@@ -176,3 +176,14 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export CLICOLOR=1
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$HOME/fabric-samples/bin:$PATH"
+export PATH="/usr/local/opt/gnu-tar/bin:$PATH"
+export PATH=$GOPATH/bin:$PATH
+export PATH=$GOPATH/bin:$PATH
+export GOBIN=$HOME/go/bin
+export GOPATH=$HOME/go
+export PATH='/usr/local/mysql/bin/':/usr/local/mysql/bin/:/bin:/bin:/usr/local/opt/gnu-tar/bin:/Users/dongwoo-yang/fabric-samples/bin:/Users/dongwoo-yang/.nvm/versions/node/v10.16.0/bin:/Users/dongwoo-yang/.rbenv/bin:/Users/dongwoo-yang/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/opt/fzf/bin
