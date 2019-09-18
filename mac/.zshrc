@@ -182,8 +182,55 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="$HOME/fabric-samples/bin:$PATH"
 export PATH="/usr/local/opt/gnu-tar/bin:$PATH"
-export PATH=$GOPATH/bin:$PATH
+
+# Go언어 환경 변수 설정
 export PATH=$GOPATH/bin:$PATH
 export GOBIN=$HOME/go/bin
 export GOPATH=$HOME/go
+
+# MySQL 환경 변수 설정
 export PATH='/usr/local/mysql/bin/':/usr/local/mysql/bin/:/bin:/bin:/usr/local/opt/gnu-tar/bin:/Users/dongwoo-yang/fabric-samples/bin:/Users/dongwoo-yang/.nvm/versions/node/v10.16.0/bin:/Users/dongwoo-yang/.rbenv/bin:/Users/dongwoo-yang/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/opt/fzf/bin
+alias ls=colorls
+
+# rbenv 환경 변수 설정
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+alias ls=colorls
+
+# peen 환경 변수 설정
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# JAVA 환경 변수 설정
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
+
+# added by Anaconda3 2019.03 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/dongwoo-yang/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/Users/dongwoo-yang/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/dongwoo-yang/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/Users/dongwoo-yang/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
+
+# apache tomcat
+alias tomcat="/usr/local/Cellar/tomcat/9.0.22/bin/catalina"
+
+export PATH=/usr/local/texlive/2019/bin/x86_64-darwin:$PATH
+
+# AWS key folder
+export key_folder="$HOME/Documents/dev/key/"
+
+
+# django-server
+export server_env=$HOME/.pyenv/versions/env_server/bin/activate
