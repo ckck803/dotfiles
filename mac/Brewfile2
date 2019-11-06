@@ -1,0 +1,3 @@
+untap 'caskroom/fonts'
+tap 'homebrew/cask-fonts'
+cask 'font-hack-nerd-font'
