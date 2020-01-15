@@ -137,8 +137,8 @@ alias vimdiff="nvim -d"
 export EDITOR=/usr/local/bin/nvim
 alias mux="tmuxinator"
 alias ls="colorls"
-alias vscode="$HOME/programing/vscode.sh"
-alias touchmd="$HOME/programing/touchmd.sh"
+alias vscode="$HOME/dev/vscode.sh"
+alias touchmd="$HOME/dev/touchmd.sh"
 
 # export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
 
@@ -200,12 +200,13 @@ eval "$(rbenv init -)"
 alias ls=colorls
 
 # pyenv 환경 변수 설정
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#export PATH="$HOME/.pyenv/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 # JAVA 환경 변수 설정
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
 
 # added by Anaconda3 2019.03 installer
@@ -241,14 +242,18 @@ eval "$(rbenv init -)"
 alias ls=colorls
 
 # beakjoon 알고리즘
-alias beakjoon=$HOME/code/cpp/beakjoon/
+alias beakjoon=$HOME/dev/cpp/beakjoon/
 # crawling 
-alias crawling=$HOME/code/python/crawling/
+alias crawling=$HOME/dev/python/crawling/
 # django
-alias django=$HOME/code/python/django/
+alias django=$HOME/dev/python/django/
 # mongodb
 export PATH=/usr/local/mongodb/bin:$PATH
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-13.jdk/Contents/Home
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-13.jdk/Contents/Home
+# export PATH=$JAVA_HOME/bin:$PATH
 
-export PATH=$JAVA_HOME/bin:$PATH
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+alias ls=colorls
+export PATH="$(yarn global bin):$PATH"

@@ -1,6 +1,9 @@
 #tap
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+
+cask 'font-hack-nerd-font'
+
 tap "homebrew/core"
 tap "homebrew/services"
 tap "caskroom/fonts"
@@ -22,6 +25,7 @@ brew 'fzf'
 # Applications
 cask 'homebrew/cask-drivers/logitech-options'
 cask 'iterm2'
+cask 'font-hack-nerd-font'
 cask 'google-chrome'
 cask 'visual-studio-code'
 cask 'android-studio'
