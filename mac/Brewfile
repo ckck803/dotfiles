@@ -1,12 +1,9 @@
 #tap
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-
-cask 'font-hack-nerd-font'
-
 tap "homebrew/core"
 tap "homebrew/services"
-tap "caskroom/fonts"
+tpa "AdoptOpenJDK/openjdk"
 
 # 중요! 이 줄이 없으면, ~/Applications에 설치하므로 꼭 넣어야 한다.
 cask_args appdir: '/Applications'
@@ -23,6 +20,7 @@ brew 'fzf'
 
 
 # Applications
+cask 'font-hack-nerd-font'
 cask 'homebrew/cask-drivers/logitech-options'
 cask 'iterm2'
 cask 'font-hack-nerd-font'
@@ -30,5 +28,12 @@ cask 'google-chrome'
 cask 'visual-studio-code'
 cask 'android-studio'
 cask 'karabiner-elements'
+cask 'keyboard-maestro'
+cask 'virtualbox'
+cask 'vagrant'
+cask 'vagrant-manager'
+cask 'postman'
+cask 'anaconda3'
+cask 'adoptopenjdk8'
 
 
