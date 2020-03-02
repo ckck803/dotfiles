@@ -257,3 +257,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 alias ls=colorls
 export PATH="$(yarn global bin):$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+alias ls=colorls
+alias ls=colorls

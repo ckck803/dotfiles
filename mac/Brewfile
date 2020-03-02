@@ -3,7 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
-tpa "AdoptOpenJDK/openjdk"
+tap "AdoptOpenJDK/openjdk"
 
 # 중요! 이 줄이 없으면, ~/Applications에 설치하므로 꼭 넣어야 한다.
 cask_args appdir: '/Applications'
@@ -33,7 +33,7 @@ cask 'virtualbox'
 cask 'vagrant'
 cask 'vagrant-manager'
 cask 'postman'
-cask 'anaconda3'
 cask 'adoptopenjdk8'
-
+cask 'istat'
+cask 'cursorsense'
 
