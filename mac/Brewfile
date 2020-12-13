@@ -17,7 +17,8 @@ brew 'git'
 brew 'mackup'
 brew 'neovim'
 brew 'fzf'
-
+brew 'yarn'
+brew 'jenkins'
 
 # Applications
 cask 'font-hack-nerd-font'
@@ -36,4 +37,7 @@ cask 'postman'
 cask 'adoptopenjdk8'
 cask 'istat'
 cask 'cursorsense'
+cask 'istat-menus'
+cask 'gitkraken'
+cask 'imazing'
 
