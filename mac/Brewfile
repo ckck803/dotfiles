@@ -19,6 +19,7 @@ brew 'neovim'
 brew 'fzf'
 brew 'yarn'
 brew 'jenkins'
+brew 'rbenv'
 
 # Applications
 cask 'font-hack-nerd-font'

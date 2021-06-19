@@ -2,13 +2,15 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+
+ZSH_DISABLE_COMPFIX="true"
+
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-
 
 #powerlevel9k 테마
 ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -19,7 +21,6 @@ POWERLEVEL9K_COLOR_SCHEME='white'
 #POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_MODE='nerdfont-complete'
 #source ~/powerlevel9k/powerlevel9k.zsh-theme
-
 
 #powerlevel9k 아이콘 관련
 
@@ -48,7 +49,6 @@ POWERLEVEL9K_TIME_BACKGROUND='white'
 # POWERLEVEL9K_CUSTOM_TIME_FORMAT="%D{\uf017 %H:%M:%S}"
 POWERLEVEL9K_TIME_FORMAT="%D{\uf017 %H:%M \uf073 %y.%m.%d}"
 
-
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
 #POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
@@ -61,7 +61,6 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%F{cyan}\uF460%F{073}\uF
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
 POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
 POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
-
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -117,21 +116,23 @@ POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(
-  git
-  zsh-syntax-highlighting
-  zsh-autosuggestions
-  fasd
-  tmux
-  tmuxinator
+    git
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    fasd
+    tmux
+    tmuxinator
+    docker
+    docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
 
+# autoload -U promptinit
+# promptinit
+# prompt pure
 
-autoload -U promptinit; promptinit
-prompt pure
-
-
+alias cat="bat"
 alias vi="nvim"
 alias vimdiff="nvim -d"
 export EDITOR=/usr/local/bin/nvim
@@ -177,11 +178,15 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 
 export CLICOLOR=1
 
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+# export PATH="$HOME/fabric-samples/bin:$PATH"
+# export PATH="/usr/local/opt/gnu-tar/bin:$PATH"
+
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="$HOME/fabric-samples/bin:$PATH"
-export PATH="/usr/local/opt/gnu-tar/bin:$PATH"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # Go언어 환경 변수 설정
 #export PATH=$GOPATH/bin:$PATH
@@ -206,18 +211,19 @@ alias ls=colorls
 
 # JAVA 환경 변수 설정
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
 
 # added by Anaconda3 2019.03 installer
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/dongwoo-yang/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/dongwoo-yang/anaconda3/bin/conda' shell.bash hook 2>/dev/null)"
 if [ $? -eq 0 ]; then
     \eval "$__conda_setup"
 else
     if [ -f "/Users/dongwoo-yang/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/dongwoo-yang/anaconda3/etc/profile.d/conda.sh"
+        # . "/Users/dongwoo-yang/anaconda3/etc/profile.d/conda.sh"  # commented out by conda initialize
         CONDA_CHANGEPS1=false conda activate base
     else
         \export PATH="/Users/dongwoo-yang/anaconda3/bin:$PATH"
@@ -234,7 +240,6 @@ export PATH=/usr/local/texlive/2019/bin/x86_64-darwin:$PATH
 # AWS key folder
 export key_folder="$HOME/Documents/dev/key/"
 
-
 # django-server
 export server_env=$HOME/.pyenv/versions/env_server/bin/activate
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -243,7 +248,7 @@ alias ls=colorls
 
 # beakjoon 알고리즘
 alias beakjoon=$HOME/dev/cpp/beakjoon/
-# crawling 
+# crawling
 alias crawling=$HOME/dev/python/crawling/
 # django
 alias django=$HOME/dev/python/django/
@@ -261,3 +266,24 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 alias ls=colorls
 alias ls=colorls
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+alias ls=colorls
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/dongwoo-yang/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/dongwoo-yang/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/dongwoo-yang/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/dongwoo-yang/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+## rabbitmq
+export PATH=$PATH:/usr/local/sbin
