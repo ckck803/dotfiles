@@ -287,3 +287,13 @@ unset __conda_setup
 
 ## rabbitmq
 export PATH=$PATH:/usr/local/sbin
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+alias ls=colorls
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/dongwoo-yang/dev/code-download/velog-master/velog-ssr/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/dongwoo-yang/dev/code-download/velog-master/velog-ssr/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/dongwoo-yang/dev/code-download/velog-master/velog-ssr/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/dongwoo-yang/dev/code-download/velog-master/velog-ssr/node_modules/tabtab/.completions/sls.zsh
