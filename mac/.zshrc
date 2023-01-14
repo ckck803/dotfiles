@@ -13,6 +13,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
 #powerlevel9k 테마
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_COLOR_SCHEME='white'
 
@@ -210,10 +211,18 @@ alias ls=colorls
 #eval "$(pyenv virtualenv-init -)"
 
 # JAVA 환경 변수 설정
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home
+# JDK 1.8
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+# export PATH=$JAVA_HOME/bin:$PATH
+
+# JDK 1.8
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
+
+# JDK 17
+# export JAVA_HOME=/usr/local/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home
+# export PATH=$JAVA_HOME/bin:$PATH
 
 # added by Anaconda3 2019.03 installer
 # >>> conda init >>>
@@ -272,14 +281,14 @@ alias ls=colorls
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/dongwoo-yang/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/dongwoo-yang/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/dongwoo-yang/opt/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/dongwoo-yang/opt/anaconda3/bin:$PATH"
+        export PATH="/usr/local/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -297,3 +306,6 @@ alias ls=colorls
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/dongwoo-yang/dev/code-download/velog-master/velog-ssr/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/dongwoo-yang/dev/code-download/velog-master/velog-ssr/node_modules/tabtab/.completions/sls.zsh
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+alias ls=colorls

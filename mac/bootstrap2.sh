@@ -1,11 +1,10 @@
 #!/bin/zsh
 
 # .zshrc가 존재하지 않을 경웈
-if [ ! -f $HOME/.zshrc ]
-then
+if [ ! -f $HOME/.zshrc ]; then
     cp $HOME/dotfiles/mac/.zshrc $HOME/
 else
-# .zshrc가 존재할 경우
+    # .zshrc가 존재할 경우
     ln -nfs $HOME/dotfiles/mac/.zshrc $HOME/.zshrc
 fi
 
@@ -13,6 +12,7 @@ fi
 $(brew --prefix)/opt/fzf/install
 
 # powerlevel9k 설치
+# git clone https://github.com/bhilburn/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
 # zsh-syntax-highlighting
