@@ -4,6 +4,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "AdoptOpenJDK/openjdk"
+tap "elastic/tap"
 
 # 중요! 이 줄이 없으면, ~/Applications에 설치하므로 꼭 넣어야 한다.
 cask_args appdir: '/Applications'
@@ -20,6 +21,8 @@ brew 'fzf'
 brew 'yarn'
 brew 'jenkins'
 brew 'rbenv'
+brew 'elasticsearch-full'
+brew 'kibana-full'
 
 # Applications
 cask 'font-hack-nerd-font'
