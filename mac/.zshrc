@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -13,55 +20,55 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
 #powerlevel9k 테마
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_COLOR_SCHEME='white'
+ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+# POWERLEVEL9K_COLOR_SCHEME='white'
 
 #powerlevel9k 폰트 관련
 #POWERLEVEL9K_MODE='awesome-patched'
 #POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_MODE='nerdfont-complete'
+# POWERLEVEL9K_MODE='nerdfont-complete'
 #source ~/powerlevel9k/powerlevel9k.zsh-theme
 
 #powerlevel9k 아이콘 관련
 
 # os icon
-POWERLEVEL9K_OS_ICON_BACKGROUND="black"
-POWERLEVEL9K_OS_ICON_FOREGROUND="196"
+# POWERLEVEL9K_OS_ICON_BACKGROUND="black"
+# POWERLEVEL9K_OS_ICON_FOREGROUND="196"
 
 # dir icon
-POWERLEVEL9K_DIR_HOME_FOREGROUND="195"
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="195"
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="195"
+# POWERLEVEL9K_DIR_HOME_FOREGROUND="195"
+# POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="195"
+# POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="195"
 
 # 배터리와 관련된 부분
-POWERLEVEL9K_BATTERY_CHARGING='yellow'
-POWERLEVEL9K_BATTERY_CHARGED='green'
-POWERLEVEL9K_BATTERY_DISCONNECTED='$DEFAULT_COLOR'
-POWERLEVEL9K_BATTERY_LOW_THRESHOLD='10'
-POWERLEVEL9K_BATTERY_LOW_COLOR='red'
-POWERLEVEL9K_BATTERY_ICON='\uf1e6'
+# POWERLEVEL9K_BATTERY_CHARGING='yellow'
+# POWERLEVEL9K_BATTERY_CHARGED='green'
+# POWERLEVEL9K_BATTERY_DISCONNECTED='$DEFAULT_COLOR'
+# POWERLEVEL9K_BATTERY_LOW_THRESHOLD='10'
+# POWERLEVEL9K_BATTERY_LOW_COLOR='red'
+# POWERLEVEL9K_BATTERY_ICON='\uf1e6'
 # POWERLEVEL9K_BATTERY_CHARGING_ICON='\uf1e6'
 # POWERLEVEL9K_BATTERY_CHARGED_ICON='\uf1e6'
 # POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='\uf0da'
 
 # 오른쪽 시간과 관련된 부분
-POWERLEVEL9K_TIME_BACKGROUND='white'
+# POWERLEVEL9K_TIME_BACKGROUND='white'
 # POWERLEVEL9K_CUSTOM_TIME_FORMAT="%D{\uf017 %H:%M:%S}"
-POWERLEVEL9K_TIME_FORMAT="%D{\uf017 %H:%M \uf073 %y.%m.%d}"
+# POWERLEVEL9K_TIME_FORMAT="%D{\uf017 %H:%M \uf073 %y.%m.%d}"
 
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
+# POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
 #POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status nvm time battery dir_writable)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status nvm time battery dir_writable)
 
 # 밑에 입력하는 부분
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%F{cyan}\uF460%F{073}\uF460%F{109}\uF460%f "
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
-POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
+# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
+# POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%F{cyan}\uF460%F{073}\uF460%F{109}\uF460%f "
+# POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
+# POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
+# POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -121,8 +128,6 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     fasd
-    tmux
-    tmuxinator
     docker
     docker-compose
 )
@@ -133,7 +138,7 @@ source $ZSH/oh-my-zsh.sh
 # promptinit
 # prompt pure
 
-alias cat="bat"
+# alias cat="bat"
 alias vi="nvim"
 alias vimdiff="nvim -d"
 export EDITOR=/usr/local/bin/nvim
@@ -141,6 +146,9 @@ alias mux="tmuxinator"
 alias ls="colorls"
 alias vscode="$HOME/dev/vscode.sh"
 alias touchmd="$HOME/dev/touchmd.sh"
+# python3
+alias python="python3"
+alias pip="pip3"
 
 # export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
 
@@ -179,15 +187,9 @@ alias touchmd="$HOME/dev/touchmd.sh"
 
 export CLICOLOR=1
 
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-# export PATH="$HOME/fabric-samples/bin:$PATH"
-# export PATH="/usr/local/opt/gnu-tar/bin:$PATH"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # Go언어 환경 변수 설정
 #export PATH=$GOPATH/bin:$PATH
@@ -196,13 +198,7 @@ export NVM_DIR="$HOME/.nvm"
 export GOPATH=$HOME/code/go/go_study
 export PATH=$GOPATH/bin:$PATH
 
-# MySQL 환경 변수 설정
-export PATH='/usr/local/mysql/bin/':/usr/local/mysql/bin/:/bin:/bin:/usr/local/opt/gnu-tar/bin:/Users/dongwoo-yang/fabric-samples/bin:/Users/dongwoo-yang/.nvm/versions/node/v10.16.0/bin:/Users/dongwoo-yang/.rbenv/bin:/Users/dongwoo-yang/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/opt/fzf/bin
-alias ls=colorls
-
 # rbenv 환경 변수 설정
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 alias ls=colorls
 
 # pyenv 환경 변수 설정
@@ -216,13 +212,19 @@ alias ls=colorls
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 # export PATH=$JAVA_HOME/bin:$PATH
 
-# JDK 1.8
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
+# JDK 11
+export JAVA_HOME=/opt/homebrew/Cellar/openjdk@11/11.0.21/libexec/openjdk.jdk/Contents/Home/
 export PATH=$JAVA_HOME/bin:$PATH
 
 # JDK 17
-# export JAVA_HOME=/usr/local/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home
-# export PATH=$JAVA_HOME/bin:$PATH
+export JAVA_HOME=/opt/homebrew/Cellar/openjdk@17/17.0.9/libexec/openjdk.jdk/Contents/Home/
+export PATH=$JAVA_HOME/bin:$PATH
+
+# export MAVEN_HOME=/Users/dongwoo-yang/devops/apache-maven-3.9.5/bin/
+# export PATH=$MAVEN_HOME/bin:$PATH
+
+# export ES_JAVA_HOME=/opt/homebrew/Cellar/openjdk@17/17.0.7/libexec/openjdk.jdk/Contents/Home/
+# export PATH=$ES_JAVA_HOME/bin:$PATH
 
 # added by Anaconda3 2019.03 installer
 # >>> conda init >>>
@@ -251,8 +253,6 @@ export key_folder="$HOME/Documents/dev/key/"
 
 # django-server
 export server_env=$HOME/.pyenv/versions/env_server/bin/activate
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 alias ls=colorls
 
 # beakjoon 알고리즘
@@ -267,19 +267,8 @@ export PATH=/usr/local/mongodb/bin:$PATH
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-13.jdk/Contents/Home
 # export PATH=$JAVA_HOME/bin:$PATH
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-alias ls=colorls
-export PATH="$(yarn global bin):$PATH"
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-alias ls=colorls
-
-alias ls=colorls
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-alias ls=colorls
+# export PATH="$(yarn global bin)":$PATH
+# export PATH="$PATH:$(yarn global bin)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -298,9 +287,6 @@ unset __conda_setup
 
 ## rabbitmq
 export PATH=$PATH:/usr/local/sbin
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-alias ls=colorls
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -308,6 +294,68 @@ alias ls=colorls
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/dongwoo-yang/dev/code-download/velog-master/velog-ssr/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/dongwoo-yang/dev/code-download/velog-master/velog-ssr/node_modules/tabtab/.completions/sls.zsh
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-alias ls=colorls
+
+# kubernates Alias
+alias k=kubectl
+export KUBE_EDITOR='code --wait'
+export K9S_EDITOR='code --wait'
+
+# source /Users/dongwoo-yang/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+export PATH=${HOME}/.rbenv/bin:${PATH}
+# export RBENV_ROOT=/opt/homebrew/opt/rbenv
+eval "$(rbenv init - zsh)"
+
+export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
+# export RBENV_ROOT=$HOME/.rbenv
+# export PATH="$HOME/.rbenv/shims:$PATH"
+# export PATH=$RBENV_ROOT/shims:/versions:$PATH
+# eval "$(rbenv init - zsh)"
+# [[ -d ~/.rbenv ]] &&
+#     export PATH=${HOME}/.rbenv/bin:${PATH} &&
+#     eval "$(rbenv init -)"
+
+# export PATH="/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/dongwoo-yang/Library/Application Support/JetBrains/Toolbox/scripts":${PATH}
+
+export PATH="/Users/dongwoo-yang/Library/Application Support/JetBrains/Toolbox/scripts":${PATH}
+export PATH=/opt/homebrew/bin:${PATH}
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# openssl
+# export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+# export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
+# export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
+# export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@1.1/lib/pkgconfig"
+# export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@1.1"
+
+# Setup Compiler paths for readline and openssl
+local READLINE_PATH=$(brew --prefix readline)
+local OPENSSL_PATH=$(brew --prefix openssl)
+export LDFLAGS="-L$READLINE_PATH/lib -L$OPENSSL_PATH/lib"
+export CPPFLAGS="-I$READLINE_PATH/include -I$OPENSSL_PATH/include"
+export PKG_CONFIG_PATH="$READLINE_PATH/lib/pkgconfig:$OPENSSL_PATH/lib/pkgconfig"
+
+# Use the OpenSSL from Homebrew instead of ruby-build
+# Note: the Homebrew version gets updated, the ruby-build version doesn't
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$OPENSSL_PATH"
+
+# Place openssl@1.1 at the beginning of your PATH (preempt system libs)
+export PATH=$OPENSSL_PATH/bin:$PATH
+
+
+# Extract the latest version of Ruby so you can do this:
+# rbenv install $LATEST_RUBY_VERSION
+export LATEST_RUBY_VERSION=$(rbenv install -l | grep -v - | tail -1)
+
+
+export CFLAGS="-Wno-error=implicit-function-declaration" 
+export RUBY_CONFIGURE_OPTS='--with-readline-dir=/usr/local/opt/readline/' 
+# arch -x86_64 rbenv install 2.1.0
+
+# export SONAR_HOME=/usr/local/Cellar/sonar-scanner/{version}/libexec 
+# export SONAR=$SONAR_HOME/bin export PATH=$SONAR:$PATH
