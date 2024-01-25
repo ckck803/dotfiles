@@ -8,6 +8,7 @@ rbenv install 2.6.3
 rbenv global 2.6.3
 rbenv rehash
 
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+brew install openssl libffi zlib rbenv readline ruby-build
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >>~/.zshrc
+echo 'eval "$(rbenv init -)"' >>~/.zshrc
 source ${HOME}/.zshrc
