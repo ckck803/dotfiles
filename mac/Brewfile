@@ -1,15 +1,16 @@
-#tap
+# tap
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "AdoptOpenJDK/openjdk"
-tap "elastic/tap"
+# tap "AdoptOpenJDK/openjdk"
+# tap "elastic/tap"
+tap "mongodb/brew"
 
 # 중요! 이 줄이 없으면, ~/Applications에 설치하므로 꼭 넣어야 한다.
 cask_args appdir: '/Applications'
 
-#Binaries/Libraries
+# Binaries/Libraries
 brew 'zsh'
 brew 'zsh-completions'
 brew 'wget'
@@ -21,8 +22,8 @@ brew 'fzf'
 brew 'yarn'
 brew 'jenkins'
 brew 'rbenv'
-brew 'elasticsearch-full'
-brew 'kibana-full'
+# brew 'elasticsearch-full'
+# brew 'kibana-full'
 
 # Applications
 cask 'font-hack-nerd-font'
@@ -38,8 +39,8 @@ cask 'virtualbox'
 cask 'vagrant'
 cask 'vagrant-manager'
 cask 'postman'
-cask 'adoptopenjdk8'
-cask 'adoptopenjdk11'
+# cask 'adoptopenjdk8'
+# cask 'adoptopenjdk11'
 cask 'istat'
 cask 'cursorsense'
 cask 'istat-menus'
@@ -47,6 +48,9 @@ cask 'gitkraken'
 cask 'imazing'
 cask 'cisdem-pdf-converter-ocr'
 cask 'openinterminal-lite'
-cask 'openjdk@17'
+# cask 'openjdk@17'
 cask 'macs-fan-control'
-cask 'turbo-boost-switcher'
+# cask 'turbo-boost-switcher'
+cask 'mongodb/brew/mongodb-community'
+cask 'keyboradcleantool'
+# cask 'aws-vpn-client'
