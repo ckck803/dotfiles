@@ -1,3 +1,19 @@
 [user]
-	name = Dongwoo Yang
-	email = ckck803@gmail.com
+name = Dongwoo Yang
+email = ckck803@gmail.com
+[core]
+excludesfile = /Users/dongwoo-yang/.gitignore_global
+editor = code --wait
+[difftool "sourcetree"]
+cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+path =
+[mergetool "sourcetree"]
+cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+trustExitCode = true
+# [commit]
+# 	template = /Users/dongwoo-yang/.stCommitMsg
+[credential]
+helper = !aws codecommit credential-helper $@
+UseHttpPath = true
+[commit]
+template = /Users/dongwoo-yang/.stCommitMsg
